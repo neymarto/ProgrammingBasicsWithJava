@@ -1,0 +1,19 @@
+package Lectures1;
+
+import java.util.Scanner;
+
+public class ConcatenateData {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        String fName = scanner.nextLine();
+        String lName = scanner.nextLine();
+        int age = Integer.parseInt(scanner.nextLine());
+        String town = scanner.nextLine();
+
+        System.out.println("You are "+fName+" "+lName+", a "+age+"-years old person from "+town+".");
+
+    }
+}
