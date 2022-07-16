@@ -8,11 +8,11 @@ public class InchesToCentimeters {
 
         Scanner scanner = new Scanner(System.in);
 
-        double cm = Double.parseDouble(scanner.nextLine());
+        double inch = Double.parseDouble(scanner.nextLine());
 
-        double inch = cm * 2.54;
+        double cm = inch * 2.54;
 
-        System.out.println(inch);
+        System.out.println(cm);
 
     }
 }
