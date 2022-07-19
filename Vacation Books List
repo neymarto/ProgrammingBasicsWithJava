@@ -1,0 +1,18 @@
+package FirstStepsInCodingExercise;
+
+import java.util.Scanner;
+
+public class VacationBooksList {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        int bookPages = Integer.parseInt(scanner.nextLine());
+        int pagesPerHour = Integer.parseInt(scanner.nextLine());
+        int days = Integer.parseInt(scanner.nextLine());
+        int calculation1 = bookPages / pagesPerHour;
+        int calculation2 = calculation1 / days;
+        System.out.println(calculation2);
+    }
+}
