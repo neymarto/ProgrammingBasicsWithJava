@@ -1,0 +1,22 @@
+package FirstStepsInCodingExercise;
+
+import java.util.Scanner;
+
+public class SuppliesForSchool {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+     double pens = Double.parseDouble(scanner.nextLine());
+     double markers = Double.parseDouble(scanner.nextLine());
+     double cleaner = Double.parseDouble(scanner.nextLine());
+     double discount = Double.parseDouble(scanner.nextLine());
+     double pensPrice = 5.80;
+     double markersPrice = 7.20;
+     double cleanerPrice = 1.20;
+     double sum = (pens * pensPrice) + (markers * markersPrice) + (cleaner * cleanerPrice);
+     double total = sum - (sum * (discount / 100));
+        System.out.println(total);
+    }
+}
