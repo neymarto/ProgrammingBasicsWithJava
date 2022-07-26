@@ -1,0 +1,21 @@
+package FirstStepsInCodingExercise;
+
+import java.util.Scanner;
+
+public class FishTank {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        double length = Double.parseDouble(scanner.nextLine());
+        double width = Double.parseDouble(scanner.nextLine());
+        double height = Double.parseDouble(scanner.nextLine());
+        double taken = Double.parseDouble(scanner.nextLine());
+
+        double area = length * width * height;
+        double areaLiters = area / 1000;
+        double total = areaLiters - (areaLiters * (taken / 100));
+        System.out.println(total);
+    }
+}
