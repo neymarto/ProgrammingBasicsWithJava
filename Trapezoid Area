@@ -1,0 +1,19 @@
+package MoreExercises1;https://www.google.com/maps/@42.6359671,23.3759492,14z
+ 
+import java.util.Scanner;
+ 
+public class TrapezoidArea {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner scanner = new Scanner(System.in);
+ 
+        double a = Double.parseDouble(scanner.nextLine());
+        double b = Double.parseDouble(scanner.nextLine());
+        double h = Double.parseDouble(scanner.nextLine());
+ 
+        double area = (a + b) * (h / 2);
+ 
+        System.out.printf("%.2f",area);
+    }
+}
