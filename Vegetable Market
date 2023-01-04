@@ -1,0 +1,23 @@
+package MoreExercises1;
+ 
+import java.util.Scanner;
+ 
+public class VegetableMarket {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner scanner = new Scanner(System.in);
+ 
+        double vegetablePrice = Double.parseDouble(scanner.nextLine());
+        double fruitPrice = Double.parseDouble(scanner.nextLine());
+        double vegetableKg = Double.parseDouble(scanner.nextLine());
+        double fruitKg = Double.parseDouble(scanner.nextLine());
+ 
+        double vegetableSum = vegetablePrice * vegetableKg;
+        double fruitSum = fruitPrice * fruitKg;
+        double sum = vegetableSum + fruitSum;
+        double sumToEuro = sum / 1.94;
+ 
+        System.out.printf("%.2f",sumToEuro);
+    }
+}
