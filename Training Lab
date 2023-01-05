@@ -1,0 +1,22 @@
+package MoreExercises1;
+ 
+import java.util.Scanner;
+ 
+public class TrainingLab {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner scanner = new Scanner(System.in);
+ 
+        double lengthM = Double.parseDouble(scanner.nextLine());
+        double widthM = Double.parseDouble(scanner.nextLine());
+ 
+        double lengthCM = lengthM * 100;
+        double widthCM = widthM * 100;
+        double lengthLeft = Math.floor(lengthCM / 120);
+        double widthLeft = Math.floor((widthCM - 100) / 70);
+        double workplaces = (lengthLeft * widthLeft) - 3;
+ 
+        System.out.printf("%.0f",workplaces);
+    }
+}
