@@ -1,0 +1,25 @@
+package FirstStepsInCodingMoreExercises;
+ 
+import java.util.Scanner;
+ 
+public class Fishland {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner scanner = new Scanner(System.in);
+ 
+        double mackerelPrice = Double.parseDouble(scanner.nextLine());
+        double spratPrice = Double.parseDouble(scanner.nextLine());
+        double bonitoKg = Double.parseDouble(scanner.nextLine());
+        double scadKg = Double.parseDouble(scanner.nextLine());
+        int musselsKg = Integer.parseInt(scanner.nextLine());
+ 
+        double bonitoPrice = mackerelPrice + (mackerelPrice * 0.60);
+        double scadPrice = spratPrice + (spratPrice * 0.80);
+        double musselsPrice = 7.50;
+        double sum = (bonitoKg * bonitoPrice) + (scadKg * scadPrice) + (musselsKg * musselsPrice);
+ 
+        System.out.printf("%.2f",sum);
+ 
+    }
+}
