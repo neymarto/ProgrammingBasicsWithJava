@@ -1,0 +1,32 @@
+package FirstStepsInCodingMoreExercises;
+ 
+import java.util.Scanner;
+ 
+public class HousePainting {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner scanner = new Scanner(System.in);
+ 
+        double houseHeight = Double.parseDouble(scanner.nextLine());
+        double houseLength = Double.parseDouble(scanner.nextLine());
+        double roofHeight = Double.parseDouble(scanner.nextLine());
+ 
+        double sideWalls = (houseHeight * houseLength) * 2.00;
+        double windows = (1.50 * 1.50) * 2.00;
+        double sides = sideWalls - windows;
+ 
+        double frontBack = (houseHeight * houseHeight) * 2.00;
+        double door = 1.2 * 2;
+        double frontBackTotal = frontBack - door;
+        double greenTotal = (sides + frontBackTotal) / 3.40;
+ 
+        double roofSides = 2 * (houseHeight * houseLength);
+        double roofFrontBack = 2 * (roofHeight * houseHeight / 2);
+        double redTotal = (roofSides + roofFrontBack) / 4.3;
+ 
+        System.out.printf("%.2f%n",greenTotal);
+        System.out.printf("%.2f",redTotal);
+ 
+    }
+}
