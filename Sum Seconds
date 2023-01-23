@@ -1,0 +1,25 @@
+package ConditionalStatementsExercise;
+ 
+import java.util.Scanner;
+ 
+public class SumSeconds {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner scanner = new Scanner(System.in);
+ 
+        int playerOne = Integer.parseInt(scanner.nextLine());
+        int playerTwo = Integer.parseInt(scanner.nextLine());
+        int playerThree = Integer.parseInt(scanner.nextLine());
+ 
+        int sumSeconds = playerOne + playerTwo + playerThree;
+        int minutes = sumSeconds / 60;
+        int seconds = sumSeconds % 60;
+ 
+        if (seconds >= 10) {
+            System.out.printf("%d:%d",minutes,seconds);
+        } else {
+            System.out.printf("%d:0%d",minutes,seconds);
+        }
+    }
+}
