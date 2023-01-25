@@ -1,0 +1,28 @@
+package ConditionalStatementsExercise;
+ 
+import java.util.Scanner;
+ 
+public class TimePlus15Minutes {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner scanner = new Scanner(System.in);
+ 
+        int hours = Integer.parseInt(scanner.nextLine());
+        int minutes = Integer.parseInt(scanner.nextLine());
+ 
+        int minutesSum = (hours * 60 + minutes) + 15;
+        int hoursAfter = minutesSum / 60;
+        int minutesAfter = minutesSum % 60;
+ 
+        if (hoursAfter == 24){
+            hoursAfter = 0;
+        }
+ 
+        if (minutesAfter < 10){
+            System.out.printf("%d:0%d",hoursAfter,minutesAfter);
+        } else {
+            System.out.printf("%d:%d",hoursAfter,minutesAfter);
+        }
+    }
+}
