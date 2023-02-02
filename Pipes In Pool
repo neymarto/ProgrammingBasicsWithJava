@@ -1,0 +1,29 @@
+package ConditionalStatementsMoreExercises;
+ 
+import java.util.Scanner;
+ 
+public class PipesInPool {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner scanner = new Scanner(System.in);
+ 
+        int volume = Integer.parseInt(scanner.nextLine());
+        int pipeOne = Integer.parseInt(scanner.nextLine());
+        int pipeTwo = Integer.parseInt(scanner.nextLine());
+        double timeMissing = Double.parseDouble(scanner.nextLine());
+ 
+        double pipeOneWater = pipeOne * timeMissing;
+        double pipeTwoWater = pipeTwo * timeMissing;
+        double taken = pipeOneWater + pipeTwoWater;
+        double percentTaken = (taken / volume) * 100;
+        double percentPipeOne = (pipeOneWater / taken) * 100;
+        double percentPipeTwo = (pipeTwoWater / taken) * 100;
+ 
+        if (volume >= taken){
+            System.out.printf("The pool is %.2f%% full. Pipe 1: %.2f%%. Pipe 2: %.2f%%.",percentTaken,percentPipeOne,percentPipeTwo);
+        } else {
+            System.out.printf("For %.2f hours the pool overflows with %.2f liters.",timeMissing,taken - volume);
+        }
+    }
+}
