@@ -1,0 +1,33 @@
+package ConditionalStatementsMoreExercises;
+ 
+import java.util.Scanner;
+ 
+public class SleepyTomCat {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner scanner = new Scanner(System.in);
+ 
+        int restDays = Integer.parseInt(scanner.nextLine());
+ 
+        int mustPlay = 30000;
+        int workDays = 365 - restDays;
+        int workPlay = workDays * 63;
+        int restPlay = restDays * 127;
+        int total = workPlay + restPlay;
+ 
+        if (total > mustPlay){
+            int minutesLeft = total - mustPlay;
+            int hours = minutesLeft / 60;
+            int minutes = minutesLeft % 60;
+            System.out.println("Tom will run away");
+            System.out.printf("%d hours and %d minutes more for play",hours,minutes);
+        } else {
+            int minutesLeft = mustPlay - total;
+            int hours = minutesLeft / 60;
+            int minutes = minutesLeft % 60;
+            System.out.println("Tom sleeps well");
+            System.out.printf("%d hours and %d minutes less for play",hours,minutes);
+        }
+    }
+}
