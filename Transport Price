@@ -1,0 +1,31 @@
+package ConditionalStatementsMoreExercises;
+ 
+import java.util.Scanner;
+ 
+public class TransportPrice {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner scanner = new Scanner(System.in);
+ 
+        int kilometers = Integer.parseInt(scanner.nextLine());
+        String time = scanner.nextLine();
+        double price = 0;
+ 
+        if (kilometers >= 100){
+            price = kilometers * 0.06;
+            System.out.printf("%.2f",price);
+        } else if (kilometers >= 20){
+            price = kilometers * 0.09;
+            System.out.printf("%.2f",price);
+        } else {
+            if (time.equals("day")){
+                price = kilometers * 0.79 + 0.70;
+                System.out.printf("%.2f",price);
+            } else {
+                price = kilometers * 0.90 + 0.70;
+                System.out.printf("%.2f",price);
+            }
+        }
+    }
+}
