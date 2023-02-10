@@ -1,0 +1,27 @@
+package ConditionalStatementsMoreExercises;
+ 
+import java.util.Scanner;
+ 
+public class Company {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner scanner = new Scanner(System.in);
+ 
+        int hoursNeeded = Integer.parseInt(scanner.nextLine());
+        int days = Integer.parseInt(scanner.nextLine());
+        int extraWorkers = Integer.parseInt(scanner.nextLine());
+ 
+        double training = days * 0.10;
+        double workDays = days - training;
+        double work = workDays * 8;
+        double extraWork = extraWorkers * (2 * days);
+        double totalWork = Math.floor(work + extraWork);
+ 
+        if (hoursNeeded >= totalWork){
+            System.out.printf("Not enough time!%.0f hours needed.",hoursNeeded - totalWork);
+        } else {
+            System.out.printf("Yes!%.0f hours left.",totalWork - hoursNeeded);
+        }
+    }
+}
