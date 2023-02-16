@@ -1,0 +1,45 @@
+package ConditionalStatementsMoreExercises;
+ 
+import java.util.Scanner;
+ 
+public class FuelTankPart2 {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner scanner = new Scanner(System.in);
+ 
+        String fuel = scanner.nextLine();
+        Double liters = Double.parseDouble(scanner.nextLine());
+        String card = scanner.nextLine();
+ 
+        double gasoline = 2.22;
+        double diesel = 2.33;
+        double gas = 0.93;
+        double sum = 0;
+        double discount = 0;
+ 
+        if (card.equals("Yes")){
+            gasoline = 2.04;
+            diesel = 2.21;
+            gas = 0.85;
+        }
+ 
+        if (fuel.equals("Gasoline")){
+            sum = gasoline * liters;
+        } else if (fuel.equals("Diesel")){
+            sum = diesel * liters;
+        } else if (fuel.equals("Gas")){
+            sum = gas * liters;
+        }
+ 
+        if (liters >= 20 && liters <= 25){
+            discount = sum * 0.08;
+        } else if (liters > 25){
+            discount = sum * 0.10;
+        }
+ 
+        double total = sum - discount;
+ 
+        System.out.printf("%.2f lv.",total);
+    }
+}
